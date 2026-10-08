@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Clandygoo/qingming-worldbuilding/registry.schema.json",
+  "title": "世界观包索引 registry.json",
+  "type": "object",
+  "required": ["schema_version", "packs"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "updated_at": { "type": "string" },
+    "packs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/pack" }
+    }
+  },
+  "$defs": {
+    "pack": {
+      "type": "object",
+      "required": ["id", "name", "author", "version", "engine_version", "license", "content_rating"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_]{2,32}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "author": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "engine_version": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 1 },
+        "content_rating": { "type": "string", "enum": ["all", "teen", "mature"] },
+        "content_descriptors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["violence", "death", "gore", "horror", "substance", "language", "romance", "self_harm", "flashing", "sensitive"]
+          },
+          "default": []
+        },
+        "trigger_warnings": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "homepage": { "type": ["string", "null"] },
+        "download": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"] },
+        "donation_url": { "type": ["string", "null"] },
+        "moderation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+            "pipeline_version": { "type": "string" },
+            "reviewed_at": { "type": "string" },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

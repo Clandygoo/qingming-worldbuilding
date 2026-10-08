@@ -1,0 +1,24 @@
+{
+  "id": "qingming",
+  "name": "清鸣",
+  "version": "0.1.0",
+  "entry": "story.json",
+  "author": "Clandygoo",
+  "license": "CC BY-NC-SA 4.0",
+  "engine_version": ">=0.1.0",
+  "homepage": "https://github.com/Clandygoo/qingming-worldbuilding",
+  "source": "https://github.com/Clandygoo/qingming-worldbuilding",
+  "description": "在记忆会凝结成实体的灾变后世界，一个没有过去的人为滞留的声音送行。",
+  "content_rating": "teen",
+  "content_descriptors": [
+    "violence",
+    "death",
+    "horror"
+  ],
+  "trigger_warnings": [
+    "含暴力与死亡描写"
+  ],
+  "donation_url": null,
+  "disclaimer": "本作为第三方自制内容，与游戏本体及其他作者无关。",
+  "download": null
+}

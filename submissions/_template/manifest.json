@@ -1,0 +1,22 @@
+{
+  "id": "your_pack_id",
+  "name": "你的世界观名",
+  "version": "1.0.0",
+  "entry": "story.json",
+
+  "author": "你的名字",
+  "license": "CC BY-NC-SA 4.0",
+  "engine_version": ">=0.1.0",
+  "homepage": "",
+  "source": "",
+  "download": null,
+
+  "description": "一句话简介。",
+
+  "content_rating": "all",
+  "content_descriptors": [],
+  "trigger_warnings": [],
+
+  "donation_url": null,
+  "disclaimer": "本作为第三方自制内容，与游戏本体及其他作者无关。"
+}
